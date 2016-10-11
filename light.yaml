@@ -1,0 +1,52 @@
+
+  - platform: mqtt
+    name: "Office Desk LED"
+    state_topic: "office/led8/light/status"
+    command_topic: "office/led8/light/set"
+    qos: 0
+  - platform: mqtt
+    name: "Basement Workbench Light"
+    state_topic: "basement/light/status"
+    command_topic: "basement/light/set"
+    qos: 0
+  - platform: mqtt
+    name: "Kitchen Stove Right Light"
+    state_topic: "kitchen/led1/light/status"
+    command_topic: "kitchen/led1/light/set"
+    qos: 0
+  - platform: mqtt
+    name: "Kitchen Stove Left Light"
+    state_topic: "kitchen/led2/light/status"
+    command_topic: "kitchen/led2/light/set"
+    qos: 0
+  - platform: mqtt
+    name: "Kitchen Fridge Right Light"
+    state_topic: "kitchen/led3/light/status"
+    command_topic: "kitchen/led3/light/set"
+    qos: 0
+  - platform: mqtt
+    name: "Kitchen Fridge Left Light"
+    state_topic: "kitchen/led4/light/status"
+    command_topic: "kitchen/led4/light/set"
+    qos: 0
+  - platform: mqtt
+    name: "Kitchen Island Light"
+    state_topic: "kitchen/led5/light/status"
+    command_topic: "kitchen/led5/light/set"
+    qos: 0
+  - platform: mqtt
+    name: "Office Light RGB"
+    state_topic: "office/candy/light/status"
+    command_topic: "office/candy/light/set"
+    brightness_state_topic: "office/candy/brightness/status"
+    brightness_command_topic: "office/candy/brightness/set"
+    rgb_state_topic: "office/candy/rgb/status"
+    rgb_command_topic: "office/candy/rgb/set"
+    #state_value_template: 
+    #brightness_value_template:
+    #rgb_value_template: "{{ value_json.rgb | join(',') }}"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 0
+    optimistic: false
+

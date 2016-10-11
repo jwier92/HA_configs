@@ -1,0 +1,27 @@
+
+  - platform: mqtt
+    state_topic: "wier/office/con01/temperature"
+    name: "Office Temperature"
+    qos: 0
+    unit_of_measurement: "°F"
+  - platform: mqtt
+    state_topic: "wier/office/con01/humidity"
+    name: "Office Humidity"
+    qos: 0
+    unit_of_measurement: "%"
+  - platform: mqtt
+    state_topic: "tower/power/status"
+    name: "Tower Power"
+    qos: 0
+  - platform: yweather
+    monitored_conditions:
+      - weather
+      - weather_current
+      - temp_min
+      - temp_max
+      - wind_speed
+      - pressure
+      - visibility
+      - temperature
+      - humidity
+

@@ -1,0 +1,82 @@
+
+  ### VIEWS
+  default_view:
+    view: yes
+    name: "Wier Home"
+    entities:
+      - group.KitchenNightLights
+      - group.Office
+      - group.weathersummary
+      - sun.sun
+      - sensor.tower_power
+      - updater.updater
+      - camera.raspberry_pi_camera
+  office_view:
+    view: yes
+    name: "Office"
+    entities:
+      - group.Office
+  Kitchen_view:
+    view: yes
+    name: "Kitchen"
+    entities:
+      - group.Kitchen
+  Basement_view:
+    view: yes
+    name: "Basement"
+    entities: group.Basement
+  Weather_view:
+    view: yes
+    name: "Weather"
+    entities: group.Weather
+  Automations_view:
+    view: yes
+    name: "Automations"
+    entities: group.Automations
+  ### Groups
+  Kitchen:
+    name: "Kitchen"
+    entities:
+      - light.kitchen_stove_right_light
+      - light.kitchen_stove_left_light
+      - light.kitchen_fridge_right_light
+      - light.kitchen_fridge_left_light
+      - light.kitchen_island_light
+  KitchenNightLights:
+    - light.kitchen_stove_right_light
+    - light.kitchen_stove_left_light
+  Office:
+    name: Office
+    entities:
+      - light.office_desk_led
+      - sensor.office_temperature
+      - sensor.office_humidity
+      - light.office_light_rgb
+  WeatherSummary:
+    name: "Weather Summary"
+    entities:
+      - sensor.yweather_condition
+      - sensor.yweather_temperature
+      - sensor.yweather_humidity
+      - sensor.yweather_wind_speed
+  Weather:
+    name: "Weather Detail"
+    entities:
+      - sensor.yweather_condition
+      - sensor.yweather_temperature
+      - sensor.yweather_humidity
+      - sensor.yweather_wind_speed
+      - sensor.yweather_pressure
+      - sensor.yweather_visibility
+      - sensor.yweather_current
+      - sensor.yweather_temperature_min
+      - sensor.yweather_temperature_max
+  Basement:
+    name: Basement
+    entities: light.basement_workbench_light
+  Automations:
+    name: Automation
+    entities:
+      - automation.kitchen_night_lights_off
+      - automation.kitchen_night_lights_on
+
